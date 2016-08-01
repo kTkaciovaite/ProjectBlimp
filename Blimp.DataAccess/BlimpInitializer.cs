@@ -8,13 +8,13 @@ namespace Blimp.DataAccess
 {
     class BlimpInitializer : DropCreateDatabaseAlways<BlimpContext>
     {
-        public override void InitializeDatabase(BlimpContext context)
+        /*public override void InitializeDatabase(BlimpContext context)
         {
             context.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction
                 , string.Format("ALTER DATABASE [{0}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE", context.Database.Connection.Database));
 
             base.InitializeDatabase(context);
-        }
+        }*/
 
         protected override void Seed(BlimpContext context)
         {
