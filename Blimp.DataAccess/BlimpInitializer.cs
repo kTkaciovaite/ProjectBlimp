@@ -20,16 +20,16 @@ namespace Blimp.DataAccess
         {
             var item = new List<Item>
             {
-                new Item() { Name = "Item number 1", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 2", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 3", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 4", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 5", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 6", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 7", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 8", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 9", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" },
-                new Item() { Name = "Item number 10", DateUpDated = DateTime.Now, Price = 1199.99, Image = "path-to-img" }
+                new Item() { Name = "Item number 1", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-arm1.jpg" },
+                new Item() { Name = "Item number 2", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-arm2.jpg" },
+                new Item() { Name = "Item number 3", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-leg1.jpg" },
+                new Item() { Name = "Item number 4", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-leg2.jpg" },
+                new Item() { Name = "Item number 5", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-leg3.jpg" },
+                new Item() { Name = "Item number 6", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-arm1.jpg" },
+                new Item() { Name = "Item number 7", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-arm2.jpg" },
+                new Item() { Name = "Item number 8", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-leg1.jpg" },
+                new Item() { Name = "Item number 9", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-leg2.jpg" },
+                new Item() { Name = "Item number 10", DateUpDated = DateTime.Now, Price = 1199.99, Image = "/Images/bionic-leg3.jpg" }
             };
 
             item.ForEach(s => context.Item.AddOrUpdate(s));
