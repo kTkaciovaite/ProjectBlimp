@@ -1,3 +1,9 @@
-﻿<h2>Index</h2>
-
-<p>It's working!</p>
+﻿<div ng-app="itemsApp" ng-controller="itemsListController as vm">
+    <div class="row" ng-repeat="item in vm.items">
+        <h1>Test</h1>
+        <p>{{ item.Id }}</p>
+        <p>{{ item.Name }}</p>
+        <p>{{ item.Price }}</p>
+        <p>{{ item.Image }}</p>
+    </div>
+</div>

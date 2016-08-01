@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Blimp.DataAccess;
 
 namespace BlimpWeb.Controllers
@@ -15,9 +11,9 @@ namespace BlimpWeb.Controllers
         public ActionResult Index()
         {
             var items = new ItemDataService();
-            var item = items.Get(1);
+            var itemsList = items.GetAll();
 
-            return View(item);
+            return View(itemsList);
         }
     }
 }
