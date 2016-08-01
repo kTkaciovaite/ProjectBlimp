@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blimp.DataAccess", "Blimp.DataAccess\Blimp.DataAccess.csproj", "{5DD01C9A-A2AB-4F09-B6BB-22EEEACC47B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blimb.Domain", "Blimb.Domain\Blimb.Domain.csproj", "{58E4F12E-F0FF-485D-9594-DE0E0FC54E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlimpWeb", "BlimpWeb\BlimpWeb.csproj", "{32431067-546A-4CDA-9CF1-21D25F81C3DE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DD01C9A-A2AB-4F09-B6BB-22EEEACC47B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD01C9A-A2AB-4F09-B6BB-22EEEACC47B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD01C9A-A2AB-4F09-B6BB-22EEEACC47B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD01C9A-A2AB-4F09-B6BB-22EEEACC47B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E4F12E-F0FF-485D-9594-DE0E0FC54E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E4F12E-F0FF-485D-9594-DE0E0FC54E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E4F12E-F0FF-485D-9594-DE0E0FC54E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E4F12E-F0FF-485D-9594-DE0E0FC54E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32431067-546A-4CDA-9CF1-21D25F81C3DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32431067-546A-4CDA-9CF1-21D25F81C3DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32431067-546A-4CDA-9CF1-21D25F81C3DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32431067-546A-4CDA-9CF1-21D25F81C3DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
