@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BlimpContext.cs" />
     <Compile Include="BlimpInitializer.cs" />
+    <Compile Include="CartDataService.cs" />
     <Compile Include="ItemDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

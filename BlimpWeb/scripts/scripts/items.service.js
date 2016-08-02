@@ -7,6 +7,20 @@ var ItemsApp;
                 this.$resource = $resource;
                 this.itemsRepository = this.$resource('/api/itemsapi');
             }
+            ItemsService.prototype.getItem = function (id) {
+                return this.itemsRepository.get({ id: id });
+            };
+            ItemsService.prototype.getAll = function (onSuccess, onFailure) {
+                this.itemsRepository.query(null, function (result) {
+                    if (typeof onSuccess === 'function') {
+                        onSuccess(result);
+                    }
+                }, function (result) {
+                    if (typeof onFailure === 'function') {
+                        onFailure(result);
+                    }
+                });
+            };
             return ItemsService;
         }());
         Services.ItemsService = ItemsService;

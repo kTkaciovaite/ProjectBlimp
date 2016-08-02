@@ -14,20 +14,12 @@ namespace BlimpWeb.Controllers
             return View(itemsList);
         }
 
-        public ActionResult Home()
+        public ActionResult Details()
         {
-            var items = new ItemDataService();
-            var itemsList = items.GetAll();
+            //var items = new ItemDataService();
+            //var item = items.Get(id);
 
-            return View(itemsList);
-        }
-
-        public ActionResult Details(int id)
-        {
-            var items = new ItemDataService();
-            var item = items.Get(id);
-
-            return View(item);
+            return View(/*item*/);
         }
     }
 }

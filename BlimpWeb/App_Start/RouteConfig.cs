@@ -15,8 +15,13 @@ namespace BlimpWeb
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "Template/{controller}/{action}"
+            );
+
+            routes.MapRoute(
+                "GoToIndex",
+                "{*url}",
+                new { controller = "Home", action = "Index" }
             );
         }
     }

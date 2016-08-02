@@ -1,8 +1,16 @@
-﻿<div ng-app="itemsApp" ng-controller="itemsListController as vm">
-    <p>{{ vm.Name }}</p>
-    <p>{{ vm.DateUpDated }}</p>
-    <p>{{ vm.Price }}</p>
+﻿<div>
+    <p>Product</p>
+    <p>{{ vm.item.Name }}</p>
+    <p>{{ vm.item.DateUpDated }}</p>
+    <p>{{ vm.item.Price }}</p>
     <p>
-        <img src="{{ vm.Image }}" alt=""/>
+        <img src="{{ vm.item.Image }}" alt=""/>
     </p>
-</div> 
+
+    <a class="btn btn-default" href="/Items">Back to List</a>
+</div>
+
+<script type="text/javascript" src="~/scripts/scripts/items.service.js"></script>
+<script type="text/javascript" src="~/scripts/scripts/items-list.controller.js"></script>
+<script type="text/javascript" src="~/scripts/scripts/items-details.controller.js"></script>
+<script type="text/javascript" src="~/scripts/scripts/items-app.js"></script>

@@ -1,15 +1,37 @@
-﻿<div class="container" ng-app="itemsApp" ng-controller="itemsListController as vm">
-    <div class="row">
-        <div class="col-sm-4" ng-repeat="item in vm.items | orderBy: '-DateUpDated'">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><a ng-href="/Items/Details/{{ item.Id }}" style="color: white;">{{ item.Name }}</a></div>
-                <div class="panel-body"><img src="{{ item.Image }}" class="img-responsive" style="width: 100%" alt="Image">
-                </div>
-                <div class="panel-footer">{{ item.DateUpDated | date:"yyyy-dd-MM HH':'m"}}
-                    <span>{{ item.Price }}</span>
-                    <a class="btn btn-default" href="">Add to cart</a>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body ng-app="itemsApp">
+    <div class="container body-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" ng-repeat="item in vm.items | orderBy: '-DateUpDated'">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><a href="/Items/{{ item.Id }}" style="color: white;">{{ item.Name }}</a></div>
+                        <div class="panel-body">
+                            <img src="{{ item.Image }}" class="img-responsive" style="width: 100%" alt="Image">
+                        </div>
+                        <div class="panel-footer">
+                            {{ item.DateUpDated | date:"yyyy-dd-MM HH':'m"}}
+                            <span>{{ item.Price }}</span>
+                            <a class="btn btn-default" href="">Add to cart</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+</html>
+
+
+
+

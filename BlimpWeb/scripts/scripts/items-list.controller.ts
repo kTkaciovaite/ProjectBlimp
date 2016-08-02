@@ -1,15 +1,22 @@
 ﻿module ItemsApp.Controllers {
 
     export class ItemsListController {
-        constructor(private $resource: angular.resource.IResourceService) {
+        constructor(private $routeParams: any, private itemsService: Services.ItemsService) {
             this.getItems();
         }
 
         public items: any;
 
         public getItems() {
-            var itemsResource = this.$resource('/api/itemsapi/');
-            this.items = itemsResource.query();
+
+            this.itemsService.getAll((result: any) => {
+                this.items = result;
+            });
+        }
+
+        public getItem(id: number) {
+
+            this.itemsService.getItem(id);
         }
     }
 }

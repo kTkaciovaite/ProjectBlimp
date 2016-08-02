@@ -3,13 +3,19 @@ var ItemsApp;
     var Controllers;
     (function (Controllers) {
         var ItemsListController = (function () {
-            function ItemsListController($resource) {
-                this.$resource = $resource;
+            function ItemsListController($routeParams, itemsService) {
+                this.$routeParams = $routeParams;
+                this.itemsService = itemsService;
                 this.getItems();
             }
             ItemsListController.prototype.getItems = function () {
-                var itemsResource = this.$resource('/api/itemsapi/');
-                this.items = itemsResource.query();
+                var _this = this;
+                this.itemsService.getAll(function (result) {
+                    _this.items = result;
+                });
+            };
+            ItemsListController.prototype.getItem = function (id) {
+                this.itemsService.getItem(id);
             };
             return ItemsListController;
         }());
