@@ -10,15 +10,35 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body ng-app="itemsApp">
-    <div class="container">
-        <h2>Cart</h2>
+    <div class="container body-content products">
+        <h1 class="text-center page-title">CART</h1>
 
-        <div ng-repeat="item in vm.items">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.items">
+                    <td>{{ item.Name }}</td>
+                    <td>{{ item.Price }}</td>
+                    <td>{{ item.Quantity }}</td>
+                    <td><a class="btn btn-default">Remove</a></td>
+                </tr>
+            </tbody>
+        </table>
+        @*<div ng-repeat="item in vm.items">
             <p>{{ item.Id }}</p>
             <p>{{ item.Name }}</p>
             <p>{{ item.Price }}</p>
             <p>{{ item.Quantity }}</p>
-        </div>
+
+
+        </div>*@
     </div>
 </body>
 </html>

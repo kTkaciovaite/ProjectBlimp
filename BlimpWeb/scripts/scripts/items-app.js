@@ -30,7 +30,6 @@ var ItemsApp;
         .service('itemsService', ['$resource', ItemsApp.Services.ItemsService])
         .service('cartService', ['$resource', ItemsApp.Services.CartService])
         .controller('itemsListController', ['$routeParams', 'itemsService', ItemsApp.Controllers.ItemsListController])
-        .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', ItemsApp.Controllers.ItemsDetailsController])
+        .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', 'itemsService', ItemsApp.Controllers.ItemsDetailsController])
         .controller('cartListController', ['$routeParams', 'cartService', ItemsApp.Controllers.CartListController]);
 })(ItemsApp || (ItemsApp = {}));
-//# sourceMappingURL=items-app.js.map

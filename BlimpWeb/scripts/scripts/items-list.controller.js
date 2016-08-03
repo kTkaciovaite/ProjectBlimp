@@ -21,7 +21,7 @@ var ItemsApp;
                 this.item = this.itemsService.getItem(id);
             };
             ItemsListController.prototype.addItem = function (id) {
-                debugger;
+                //debugger;
                 this.itemsService.addItem(this.item);
             };
             return ItemsListController;
@@ -29,4 +29,3 @@ var ItemsApp;
         Controllers.ItemsListController = ItemsListController;
     })(Controllers = ItemsApp.Controllers || (ItemsApp.Controllers = {}));
 })(ItemsApp || (ItemsApp = {}));
-//# sourceMappingURL=items-list.controller.js.map

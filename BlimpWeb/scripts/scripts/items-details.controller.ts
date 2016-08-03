@@ -7,7 +7,7 @@
 
         //constructor(private $routeParams: any, private itemsService: Services.ItemsService) { }
 
-        constructor(private $resource: angular.resource.IResourceService, private $routeParams: any, private $location: angular.ILocationService) {
+        constructor(private $resource: angular.resource.IResourceService, private $routeParams: any, private $location: angular.ILocationService, private itemsService: Services.ItemsService) {
             this.item = this.init($routeParams.id);
         }
 
@@ -24,5 +24,10 @@
                 });
         }
 
+        public addItem(item: any) {
+            //debugger;
+            this.itemsService.addItem(item);
+            //debugger;
+        }
     }
 }

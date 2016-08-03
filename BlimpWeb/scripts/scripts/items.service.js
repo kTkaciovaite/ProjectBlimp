@@ -23,10 +23,10 @@ var ItemsApp;
             };
             ItemsService.prototype.addItem = function (item) {
                 this.itemsRepository.save(item);
+                //debugger;
             };
             return ItemsService;
         }());
         Services.ItemsService = ItemsService;
     })(Services = ItemsApp.Services || (ItemsApp.Services = {}));
 })(ItemsApp || (ItemsApp = {}));
-//# sourceMappingURL=items.service.js.map

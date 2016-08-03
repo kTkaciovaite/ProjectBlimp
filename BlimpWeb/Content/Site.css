@@ -10,6 +10,17 @@
 
 .navbar.navbar-inverse {
     margin-bottom: 0;
+    background-color: #0A090C;
+    
+}
+
+.navbar.navbar-inverse a,
+ul.nav.navbar-nav.navbar-right li a {
+    color: #F0EDEE;
+}
+
+ul.nav.navbar-nav.navbar-right li a:hover {
+    color: #829AAC;
 }
 
 .jumbotron {
@@ -56,6 +67,14 @@ h2.text-center {
     margin-bottom: 30px;
 }
 
+.container.body-content.products {
+    margin-top: 20px;
+}
+
+.text-center.page-title {
+    margin-bottom: 30px;
+}
+
 .thumbnail {
     margin-bottom: 25px;
 }
@@ -71,6 +90,18 @@ h2.text-center {
 
 small {
     color: #999;
+}
+
+.price {
+    margin-top: 50px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.col-md-6.pull-left img {
+    width: 100%;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */

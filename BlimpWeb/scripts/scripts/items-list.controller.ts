@@ -25,7 +25,7 @@
         }
 
         public addItem(id: number) {
-            debugger;
+            //debugger;
             this.itemsService.addItem(this.item);
         }
     }
