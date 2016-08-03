@@ -22,5 +22,9 @@
                 }
             });
         }
+
+        public addItem(item: any) {
+            this.itemsRepository.save(item);
+        }
     }
 }

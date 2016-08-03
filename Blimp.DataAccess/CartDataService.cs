@@ -19,7 +19,9 @@ namespace Blimp.DataAccess
         {
             using (var context = new BlimpContext())
             {
+                cartItem.Quantity = 1;
                 context.Cart.AddOrUpdate(cartItem);
+
                 context.SaveChanges();
             }
         }

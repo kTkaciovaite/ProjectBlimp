@@ -24,12 +24,10 @@ namespace BlimpWeb.Controllers
         }
 
         [HttpPost]
-        public Cart Post(Cart cartItem)
+        public void AddToCart(Cart cartItem)
         {
             var cartService = new CartDataService();
             cartService.Add(cartItem);
-
-            return cartItem;
         }
     }
 }

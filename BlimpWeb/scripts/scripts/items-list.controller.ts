@@ -6,6 +6,7 @@
         }
 
         public items: any;
+        public item: any;
 
         public getItems() {
 
@@ -17,6 +18,15 @@
         public getItem(id: number) {
 
             this.itemsService.getItem(id);
+        }
+
+        public init(id: number) {
+            this.item = this.itemsService.getItem(id);
+        }
+
+        public addItem(id: number) {
+            debugger;
+            this.itemsService.addItem(this.item);
         }
     }
 }

@@ -21,6 +21,9 @@ var ItemsApp;
                     }
                 });
             };
+            ItemsService.prototype.addItem = function (item) {
+                this.itemsRepository.save(item);
+            };
             return ItemsService;
         }());
         Services.ItemsService = ItemsService;
