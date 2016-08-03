@@ -22,5 +22,14 @@ namespace BlimpWeb.Controllers
 
             return item;
         }
+
+        [HttpPost]
+        public Cart Post(Cart cartItem)
+        {
+            var cartService = new CartDataService();
+            cartService.Add(cartItem);
+
+            return cartItem;
+        }
     }
 }

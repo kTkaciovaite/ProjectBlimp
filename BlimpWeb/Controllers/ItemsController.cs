@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Blimb.Domain;
 using Blimp.DataAccess;
 
 namespace BlimpWeb.Controllers

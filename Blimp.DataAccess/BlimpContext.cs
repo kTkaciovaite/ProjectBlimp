@@ -11,6 +11,6 @@ namespace Blimp.DataAccess
         }
 
         public DbSet<Item> Item { get; set; }
-        
+        public DbSet<Cart> Cart { get; set; }
     }
 }

@@ -154,6 +154,7 @@
     <Content Include="Images\bionic-leg1.jpg" />
     <Content Include="Images\bionic-leg2.jpg" />
     <Content Include="Images\bionic-leg3.jpg" />
+    <Content Include="Images\jumbotron-img.jpg" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -171,6 +172,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CartApiController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsApiController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
@@ -191,6 +194,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Cart\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -213,6 +217,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="scripts\scripts\cart-list.controller.ts" />
+    <TypeScriptCompile Include="scripts\scripts\cart.service.ts" />
     <TypeScriptCompile Include="scripts\scripts\items-app.ts" />
     <TypeScriptCompile Include="scripts\scripts\items-details.controller.ts" />
     <TypeScriptCompile Include="scripts\scripts\items-list.controller.ts" />

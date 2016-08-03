@@ -21,9 +21,16 @@
                         controllerAs: 'vm',
                         templateUrl: 'Template/Items/Details'
                     })
+                    .when('/Cart', {
+                        controller: 'cartListController',
+                        controllerAs: 'vm',
+                        templateUrl: 'Template/Cart/Index'
+                    })
                     .otherwise({ redirectTo: '/' });
             }])
         .service('itemsService', ['$resource', Services.ItemsService])
+        .service('cartService', ['$resource', Services.CartService])
         .controller('itemsListController', ['$routeParams', 'itemsService', Controllers.ItemsListController])
-        .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', Controllers.ItemsDetailsController]);
+        .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', Controllers.ItemsDetailsController])
+        .controller('cartListController', ['$routeParams', 'cartService', Controllers.CartListController]);
 }

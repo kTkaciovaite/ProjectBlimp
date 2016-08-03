@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -9,6 +8,71 @@
     padding-right: 15px;
 }
 
+.navbar.navbar-inverse {
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    height: 100vh; /* vh - viewport height */
+    background-image: url('/Images/jumbotron-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron .container.text-center h1 {
+    color: #112C41;
+    text-transform: uppercase;
+}
+
+a.btn.btn-primary {
+    color: #112C41;
+    background: transparent;
+    border-color: #112C41;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 9px 17px;
+    border-radius: 0;
+}
+
+a.btn.btn-primary:hover {
+    color: white;
+    background: #112C41;
+}
+
+.btn.btn-default {
+    color: #112C41;
+    background: transparent;
+    border-color: #2C666E;
+    border-radius: 0;
+}
+
+.btn.btn-default:hover {
+    color: white;
+    background: #112C41;
+}
+
+h2.text-center {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.thumbnail {
+    margin-bottom: 25px;
+}
+
+.thumbnail h3 a {
+    color: #0A090C;
+}
+
+.thumbnail h3 a:hover {
+    text-decoration: none;
+    color: #2C666E;
+}
+
+small {
+    color: #999;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -16,3 +80,8 @@ textarea {
     max-width: 280px;
 }
 
+@media (min-width: 768px) {
+  .navbar.navbar-inverse {
+    border-radius: 0;
+  }
+}
