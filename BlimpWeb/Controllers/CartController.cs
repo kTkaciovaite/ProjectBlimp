@@ -17,5 +17,10 @@ namespace BlimpWeb.Controllers
 
             return View(/*itemsList*/);
         }
+
+        public ActionResult Checkout()
+        {
+            return View();
+        }
     }
 }

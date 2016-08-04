@@ -15,32 +15,27 @@
 
         <table class="table">
             <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th></th>
-                </tr>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in vm.items">
-                    <td>{{ item.Name }}</td>
-                    <td>{{ item.Price }}</td>
-                    <td>{{ item.Quantity }}</td>
-                    <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart">Remove</a></td>
-                    <br />
-                    @*<td><a class="btn btn-default">Remove</a></td>*@
-                </tr>
+            <tr ng-repeat="item in vm.items">
+                <td>{{ item.Name }}</td>
+                <td>{{ item.Price }}</td>
+                <td>{{ item.Quantity }}</td>
+                <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart">Remove</a></td>
+                <br/>
+            </tr>
             </tbody>
         </table>
-        @*<div ng-repeat="item in vm.items">
-            <p>{{ item.Id }}</p>
-            <p>{{ item.Name }}</p>
-            <p>{{ item.Price }}</p>
-            <p>{{ item.Quantity }}</p>
 
-
-        </div>*@
+        <div class="text-center">
+            <a class="btn btn-primary" href="/Checkout">CHECKOUT</a>
+        </div>
     </div>
 </body>
 </html>

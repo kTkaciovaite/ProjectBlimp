@@ -24,9 +24,9 @@
             this.item = this.itemsService.getItem(id);
         }
 
-        public addItem(id: number) {
+        public addItem(item) {
             //debugger;
-            this.itemsService.addItem(this.item);
+            this.itemsService.addItem(item);
         }
     }
 }

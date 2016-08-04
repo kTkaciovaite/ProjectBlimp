@@ -20,9 +20,9 @@ var ItemsApp;
             ItemsListController.prototype.init = function (id) {
                 this.item = this.itemsService.getItem(id);
             };
-            ItemsListController.prototype.addItem = function (id) {
+            ItemsListController.prototype.addItem = function (item) {
                 //debugger;
-                this.itemsService.addItem(this.item);
+                this.itemsService.addItem(item);
             };
             return ItemsListController;
         }());

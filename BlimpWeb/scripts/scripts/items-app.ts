@@ -26,6 +26,9 @@
                         controllerAs: 'vm',
                         templateUrl: 'Template/Cart/Index'
                     })
+                    .when('/Checkout', {
+                        templateUrl: 'Template/Cart/Checkout'
+                    })
                     .otherwise({ redirectTo: '/' });
             }])
         .service('itemsService', ['$resource', Services.ItemsService])
