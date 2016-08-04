@@ -14,5 +14,12 @@ namespace BlimpWeb.Controllers
 
             return items;
         }
+
+        [HttpPost]
+        public void Remove(Cart cartItem)
+        {
+            var cartService = new CartDataService();
+            cartService.Remove(cartItem);
+        }
     }
 }

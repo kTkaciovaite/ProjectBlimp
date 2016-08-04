@@ -14,6 +14,9 @@ var ItemsApp;
                     _this.items = result;
                 });
             };
+            CartListController.prototype.removeItem = function (cartItem) {
+                this.cartService.removeItem(cartItem);
+            };
             return CartListController;
         }());
         Controllers.CartListController = CartListController;

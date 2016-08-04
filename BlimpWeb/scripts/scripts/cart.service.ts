@@ -18,5 +18,9 @@
                 }
             });
         }
+
+        public removeItem(cartItem: any) {
+            this.itemsRepository.save(cartItem);
+        }
     }
 }

@@ -13,5 +13,9 @@
                 this.items = result;
             });
         }
+
+        public removeItem(cartItem: any) {
+            this.cartService.removeItem(cartItem);
+        }
     }
 }

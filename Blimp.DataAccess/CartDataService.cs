@@ -26,5 +26,15 @@ namespace Blimp.DataAccess
                 context.SaveChanges();
             }
         }
+
+        public void Remove(Cart cartItem)
+        {
+            using (var context = new BlimpContext())
+            {
+                context.Cart.Attach(cartItem);
+                context.Cart.Remove(cartItem);
+                context.SaveChanges();
+            }
+        }
     }
 }

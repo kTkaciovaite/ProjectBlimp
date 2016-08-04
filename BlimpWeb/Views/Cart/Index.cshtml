@@ -27,7 +27,9 @@
                     <td>{{ item.Name }}</td>
                     <td>{{ item.Price }}</td>
                     <td>{{ item.Quantity }}</td>
-                    <td><a class="btn btn-default">Remove</a></td>
+                    <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart">Remove</a></td>
+                    <br />
+                    @*<td><a class="btn btn-default">Remove</a></td>*@
                 </tr>
             </tbody>
         </table>

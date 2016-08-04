@@ -18,6 +18,9 @@ var ItemsApp;
                     }
                 });
             };
+            CartService.prototype.removeItem = function (cartItem) {
+                this.itemsRepository.save(cartItem);
+            };
             return CartService;
         }());
         Services.CartService = CartService;

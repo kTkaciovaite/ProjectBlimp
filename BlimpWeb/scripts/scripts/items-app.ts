@@ -21,7 +21,7 @@
                         controllerAs: 'vm',
                         templateUrl: 'Template/Items/Details'
                     })
-                    .when('/Cart', {
+                    .when('/Cart/', {
                         controller: 'cartListController',
                         controllerAs: 'vm',
                         templateUrl: 'Template/Cart/Index'
