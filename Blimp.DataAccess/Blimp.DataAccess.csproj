@@ -54,6 +54,7 @@
     <Compile Include="CartDataService.cs" />
     <Compile Include="ItemDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingDataService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -182,6 +182,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsApiController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\RatingsApiController.cs" />
+    <Compile Include="Controllers\RatingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,6 +203,7 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Ratings\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -229,6 +232,8 @@
     <TypeScriptCompile Include="scripts\scripts\items-details.controller.ts" />
     <TypeScriptCompile Include="scripts\scripts\items-list.controller.ts" />
     <TypeScriptCompile Include="scripts\scripts\items.service.ts" />
+    <TypeScriptCompile Include="scripts\scripts\ratings-list.controller.ts" />
+    <TypeScriptCompile Include="scripts\scripts\ratings.service.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-mocks.d.ts" />

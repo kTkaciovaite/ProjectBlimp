@@ -33,9 +33,11 @@
             }])
         .service('itemsService', ['$resource', Services.ItemsService])
         .service('cartService', ['$resource', Services.CartService])
+        .service('ratingsService', ['$resource', Services.RatingsService])
         .controller('itemsListController', ['$routeParams', 'itemsService', Controllers.ItemsListController])
         .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', 'itemsService', Controllers.ItemsDetailsController])
         .controller('cartListController', ['$routeParams', 'cartService', Controllers.CartListController])
+        .controller('ratingsListController', ['$routeParams', 'ratingsService', Controllers.RatingsListController])
         .controller('itemRatingController', $scope => {
             $scope.rate = 5;
             $scope.max = 5;
