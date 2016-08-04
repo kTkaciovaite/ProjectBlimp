@@ -13,8 +13,20 @@
     <div class="container body-content products">
         <div class="container">
             <h1 class="text-center page-title">PRODUCTS</h1>
+
+            <div class="clearfix">
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4 search-box">
+                    <input class="form-control" type="text" placeholder="Search products" ng-model="searchBox" />
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </span>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            
             <div class="row">
-                <div class="col-sm-4" ng-repeat="item in vm.items | orderBy: '-DateUpDated'">
+                <div class="col-sm-4" ng-repeat="item in vm.items | orderBy: '-DateUpDated' | filter: searchBox">
                     <div class="thumbnail">
                         <img src="{{ item.Image }}" class="img-responsive" style="width: 100%" alt="Image">
                         <div class="caption">

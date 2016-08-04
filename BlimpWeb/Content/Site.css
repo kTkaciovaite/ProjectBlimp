@@ -116,8 +116,19 @@ a.carousel-control.right {
     font-size: 40px;
 }
 
-.glyphicon.glyphicon-chevron-left {
-    
+span.glyphicon.glyphicon-chevron-left {
+    position: absolute;
+    left: 0;
+}
+
+span.input-group-addon {
+    background-color: white;
+}
+
+div.input-group.col-md-4.search-box {
+    padding-right: 31px;
+    padding-left: 31px;
+    margin-bottom: 30px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
