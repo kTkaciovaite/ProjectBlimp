@@ -139,6 +139,35 @@ div.input-group.col-md-4.search-box {
     margin-top: 30px;
 }
 
+.glyphicon.glyphicon-star,
+.glyphicon.glyphicon-star-empty {
+    font-size: 30px;
+}
+
+.glyphicon.glyphicon-star:hover,
+.glyphicon.glyphicon-star-empty:hover {
+    font-size: 30px;
+}
+
+.rating-form {
+    margin-top: 50px;
+}
+
+.rating-inputs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input.form-control.rating-input,
+textarea.form-control.rating-input {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.rating:focus {
+    outline: none;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

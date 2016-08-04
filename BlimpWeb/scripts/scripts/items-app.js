@@ -1,6 +1,6 @@
 var ItemsApp;
 (function (ItemsApp) {
-    angular.module('itemsApp', ['ngRoute', 'ngResource'])
+    angular.module('itemsApp', ['ngRoute', 'ngResource', 'ui.bootstrap'])
         .config(['$locationProvider', '$routeProvider',
         function ($locationProvider, $routeProvider) {
             $locationProvider.html5Mode(true);
@@ -34,6 +34,21 @@ var ItemsApp;
         .service('cartService', ['$resource', ItemsApp.Services.CartService])
         .controller('itemsListController', ['$routeParams', 'itemsService', ItemsApp.Controllers.ItemsListController])
         .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', 'itemsService', ItemsApp.Controllers.ItemsDetailsController])
-        .controller('cartListController', ['$routeParams', 'cartService', ItemsApp.Controllers.CartListController]);
+        .controller('cartListController', ['$routeParams', 'cartService', ItemsApp.Controllers.CartListController])
+        .controller('itemRatingController', function ($scope) {
+        $scope.rate = 5;
+        $scope.max = 5;
+        $scope.isReadonly = false;
+        $scope.hoveringOver = function (value) {
+            $scope.overStar = value;
+            $scope.percent = 100 * (value / $scope.max);
+        };
+        $scope.ratingStates = [
+            { stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle' },
+            { stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty' },
+            { stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle' },
+            { stateOn: 'glyphicon-heart' },
+            { stateOff: 'glyphicon-off' }
+        ];
+    });
 })(ItemsApp || (ItemsApp = {}));
-//# sourceMappingURL=items-app.js.map

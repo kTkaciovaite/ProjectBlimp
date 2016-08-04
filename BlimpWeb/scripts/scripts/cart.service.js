@@ -26,4 +26,3 @@ var ItemsApp;
         Services.CartService = CartService;
     })(Services = ItemsApp.Services || (ItemsApp.Services = {}));
 })(ItemsApp || (ItemsApp = {}));
-//# sourceMappingURL=cart.service.js.map
