@@ -33,3 +33,4 @@ var ItemsApp;
         .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', 'itemsService', ItemsApp.Controllers.ItemsDetailsController])
         .controller('cartListController', ['$routeParams', 'cartService', ItemsApp.Controllers.CartListController]);
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=items-app.js.map

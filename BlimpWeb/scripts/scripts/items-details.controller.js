@@ -33,3 +33,4 @@ var ItemsApp;
         Controllers.ItemsDetailsController = ItemsDetailsController;
     })(Controllers = ItemsApp.Controllers || (ItemsApp.Controllers = {}));
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=items-details.controller.js.map
