@@ -104,6 +104,22 @@ small {
     width: 100%;
 }
 
+.carousel-inner {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+a.carousel-control.left,
+a.carousel-control.right {
+    background-image: none;
+    color: #0A090C;
+    font-size: 40px;
+}
+
+.glyphicon.glyphicon-chevron-left {
+    
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
