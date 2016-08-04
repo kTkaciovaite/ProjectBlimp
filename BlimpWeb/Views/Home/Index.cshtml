@@ -4,36 +4,30 @@
     <base href="/" />
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title Blimp</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body ng-app="itemsApp">
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">BLIMP</a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">BLIMP</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/Items">PRODUCTS</a></li>
+                    <li><a href="/Cart">SHOPPING CART <i class="glyphicon glyphicon-shopping-cart"></i></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/Items">PRODUCTS</a></li>
-                <li><a href="/Cart">SHOPPING CART <i class="glyphicon glyphicon-shopping-cart"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
 
     <ng-view></ng-view>
 
-<div class="container body-content">
-        
+    <div class="container body-content">
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Project Blimp</p>

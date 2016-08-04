@@ -9,14 +9,12 @@
         public item: any;
 
         public getItems() {
-
             this.itemsService.getAll((result: any) => {
                 this.items = result;
             });
         }
 
         public getItem(id: number) {
-
             this.itemsService.getItem(id);
         }
 
@@ -25,7 +23,6 @@
         }
 
         public addItem(item) {
-            //debugger;
             this.itemsService.addItem(item);
         }
     }

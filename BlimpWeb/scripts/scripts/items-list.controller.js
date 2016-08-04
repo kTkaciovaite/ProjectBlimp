@@ -21,7 +21,6 @@ var ItemsApp;
                 this.item = this.itemsService.getItem(id);
             };
             ItemsListController.prototype.addItem = function (item) {
-                //debugger;
                 this.itemsService.addItem(item);
             };
             return ItemsListController;

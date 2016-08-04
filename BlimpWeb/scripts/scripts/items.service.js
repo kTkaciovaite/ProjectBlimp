@@ -23,7 +23,6 @@ var ItemsApp;
             };
             ItemsService.prototype.addItem = function (item) {
                 this.itemsRepository.save(item);
-                //debugger;
             };
             return ItemsService;
         }());

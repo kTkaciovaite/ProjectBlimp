@@ -8,7 +8,6 @@
         public items: any;
 
         public getItems() {
-
             this.cartService.getAll((result: any) => {
                 this.items = result;
             });

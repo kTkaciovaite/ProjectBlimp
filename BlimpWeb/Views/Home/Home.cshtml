@@ -9,20 +9,6 @@
     <h2 class="text-center">Latest Products</h2>
 
     <div class="row">
-        @*<div class="col-sm-4" ng-repeat="item in vm.items | orderBy: '-DateUpDated' | limitTo: 5">
-            <div class="thumbnail">
-                <img src="{{ item.Image }}" class="img-responsive" style="width: 100%" alt="Image">
-                <div class="caption">
-                    <h3><a href="/Items/{{ item.Id }}">{{ item.Name }}</a>
-                    </h3>
-                    <small>{{ item.DateUpDated | date:"yyyy-dd-MM HH':'m" }}</small>
-                    <div class="text-center">
-                        <h2>{{ item.Price }} &euro;</h2>
-                        <a class="btn btn-default" ng-click="vm.addItem(item)" type="button" role="button" href="/Cart">Add to cart</a><br/>
-                    </div>
-                </div>
-            </div>
-        </div>*@
         <div class="col-md-3"></div>
         <div class="carousel col-md-6" id="slider">
             <div class="carousel-inner">
@@ -47,6 +33,7 @@
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
+
             <a class="carousel-control right" href="#slider" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>

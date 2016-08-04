@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Data.Entity.Migrations;
 using System.Linq;
 using Blimb.Domain;
 
@@ -21,8 +20,6 @@ namespace Blimp.DataAccess
             {
                 cartItem.Quantity = 1;
                 context.Cart.Add(cartItem);
-                //context.Cart.AddOrUpdate(cartItem);
-
                 context.SaveChanges();
             }
         }

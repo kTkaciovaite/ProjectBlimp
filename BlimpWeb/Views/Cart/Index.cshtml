@@ -4,7 +4,7 @@
     <base href="/" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title Blimp</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -12,25 +12,25 @@
 <body ng-app="itemsApp">
     <div class="container body-content products">
         <h1 class="text-center page-title">SHOPPING CART</h1>
-
         <a class="btn btn-default" href="/Items"><i class="glyphicon glyphicon-chevron-left"></i> Back to Shop</a>
+
         <table class="table">
             <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th></th>
-            </tr>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="item in vm.items">
-                <td>{{ item.Name }}</td>
-                <td>{{ item.Price }}</td>
-                <td>{{ item.Quantity }}</td>
-                <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart"><i class="glyphicon glyphicon-trash"></i> Remove</a></td>
-                <br/>
-            </tr>
+                <tr ng-repeat="item in vm.items">
+                    <td>{{ item.Name }}</td>
+                    <td>{{ item.Price }}</td>
+                    <td>{{ item.Quantity }}</td>
+                    <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart"><i class="glyphicon glyphicon-trash"></i> Remove</a></td>
+                    <br/>
+                </tr>
             </tbody>
         </table>
 

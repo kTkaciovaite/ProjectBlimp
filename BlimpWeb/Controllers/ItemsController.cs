@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using Blimb.Domain;
 using Blimp.DataAccess;
 
 namespace BlimpWeb.Controllers
@@ -17,10 +16,7 @@ namespace BlimpWeb.Controllers
 
         public ActionResult Details()
         {
-            //var items = new ItemDataService();
-            //var item = items.Get(id);
-
-            return View(/*item*/);
+            return View();
         }
     }
 }
