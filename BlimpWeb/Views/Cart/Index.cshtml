@@ -11,8 +11,9 @@
 </head>
 <body ng-app="itemsApp">
     <div class="container body-content products">
-        <h1 class="text-center page-title">CART</h1>
+        <h1 class="text-center page-title">SHOPPING CART</h1>
 
+        <a class="btn btn-default" href="/Items"><i class="glyphicon glyphicon-chevron-left"></i> Back to Shop</a>
         <table class="table">
             <thead>
             <tr>
@@ -27,7 +28,7 @@
                 <td>{{ item.Name }}</td>
                 <td>{{ item.Price }}</td>
                 <td>{{ item.Quantity }}</td>
-                <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart">Remove</a></td>
+                <td><a class="btn btn-default" ng-click="vm.removeItem(item)" type="button" role="button" href="/Cart"><i class="glyphicon glyphicon-trash"></i> Remove</a></td>
                 <br/>
             </tr>
             </tbody>
