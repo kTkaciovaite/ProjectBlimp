@@ -14,7 +14,7 @@
 
                 <div class="buttons">
                     <a class="btn btn-default" href="/Items"><i class="glyphicon glyphicon-chevron-left"></i> Back to List</a>
-                    <a class="btn btn-default" ng-click="vm.addItem(vm.item)" type="button" role="button" href="/Cart">Add to cart<i class="glyphicon glyphicon-shopping-cart"></i></a>
+                    <a class="btn btn-default" ng-click="vm.addItem(vm.item)" type="button" role="button" href="/Cart">Add to cart <i class="glyphicon glyphicon-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
@@ -25,15 +25,16 @@
 <div class="clearfix container rating-form">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-        <h2>RATE THIS PRODUCT</h2>
+        <h2 class="text-center">RATE THIS PRODUCT</h2>
 
-        <form>
+        <form name="form-review" ng-controller="ratingsListController as nm" ng-submit="nm.save()">
+            <p style="display: none;" name="itemid" ng-model="nm.review.ItemId = vm.item.Id"></p>
             <div class="text-center" ng-controller="itemRatingController">
-                <div class="rating" uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" aria-labelledby="default-rating"></div>
+                <div class="rating" uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" rating-value="rating.current" aria-labelledby="default-rating" name="stars" ng-model="nm.review.Stars=rating-value"></div>
 
                 <div class="text-center rating-inputs">
-                    <input type="text" class="form-control rating-input" id="clientName" placeholder="Enter your name" Required/>
-                    <textarea class="form-control rating-input" placeholder="Write your review" Required></textarea>
+                    <input type="text" class="form-control rating-input" name="name" placeholder="Enter your name" Required ng-model="nm.review.Name"/>
+                    <textarea class="form-control rating-input" placeholder="Write your review" name="review" Required ng-model="nm.review.Review"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-default">Submit</button>
@@ -62,11 +63,3 @@
         </div>
     </div>
 </div>
-
-    
-
-
-<script type="text/javascript" src="~/scripts/scripts/items.service.js"></script>
-<script type="text/javascript" src="~/scripts/scripts/items-list.controller.js"></script>
-<script type="text/javascript" src="~/scripts/scripts/items-details.controller.js"></script>
-<script type="text/javascript" src="~/scripts/scripts/items-app.js"></script>

@@ -3,11 +3,12 @@ var ItemsApp;
     var Controllers;
     (function (Controllers) {
         var ItemsDetailsController = (function () {
-            function ItemsDetailsController($resource, $routeParams, $location, itemsService) {
+            function ItemsDetailsController($resource, $routeParams, $location, itemsService, ratingsService) {
                 this.$resource = $resource;
                 this.$routeParams = $routeParams;
                 this.$location = $location;
                 this.itemsService = itemsService;
+                this.ratingsService = ratingsService;
                 this.repository = this.$resource("/api/ItemsApi/:id", { id: "@id" });
                 this.item = this.init($routeParams.id);
             }
@@ -27,3 +28,4 @@ var ItemsApp;
         Controllers.ItemsDetailsController = ItemsDetailsController;
     })(Controllers = ItemsApp.Controllers || (ItemsApp.Controllers = {}));
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=items-details.controller.js.map

@@ -14,5 +14,12 @@ namespace BlimpWeb.Controllers
 
             return ratingsList;
         }
+
+        [HttpPost]
+        public void Post(Rating rating)
+        {
+            var ratingService = new RatingDataService();
+            ratingService.Add(rating);
+        }
     }
 }

@@ -18,5 +18,13 @@
                 }
             });
         }
+
+        //public addRating(item: any) {
+        //    this.itemsRepository.save(item);
+        //}
+
+        public submit(model: any) {
+            this.itemsRepository.save(model);
+        }
     }
 }

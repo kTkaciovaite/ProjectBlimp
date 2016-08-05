@@ -28,3 +28,4 @@ var ItemsApp;
         Controllers.ItemsListController = ItemsListController;
     })(Controllers = ItemsApp.Controllers || (ItemsApp.Controllers = {}));
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=items-list.controller.js.map

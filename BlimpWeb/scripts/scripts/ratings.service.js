@@ -18,8 +18,15 @@ var ItemsApp;
                     }
                 });
             };
+            //public addRating(item: any) {
+            //    this.itemsRepository.save(item);
+            //}
+            RatingsService.prototype.submit = function (model) {
+                this.itemsRepository.save(model);
+            };
             return RatingsService;
         }());
         Services.RatingsService = RatingsService;
     })(Services = ItemsApp.Services || (ItemsApp.Services = {}));
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=ratings.service.js.map

@@ -16,7 +16,7 @@
                         controllerAs: 'vm',
                         templateUrl: 'Template/Items/Index'
                     })
-                    .when('/Items/:id', {
+                    .when('/Items/:id/', {
                         controller: 'itemsDetailsController',
                         controllerAs: 'vm',
                         templateUrl: 'Template/Items/Details'
@@ -35,7 +35,7 @@
         .service('cartService', ['$resource', Services.CartService])
         .service('ratingsService', ['$resource', Services.RatingsService])
         .controller('itemsListController', ['$routeParams', 'itemsService', Controllers.ItemsListController])
-        .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', 'itemsService', Controllers.ItemsDetailsController])
+        .controller('itemsDetailsController', ['$resource', '$routeParams', '$location', 'itemsService', 'ratingsService', Controllers.ItemsDetailsController])
         .controller('cartListController', ['$routeParams', 'cartService', Controllers.CartListController])
         .controller('ratingsListController', ['$routeParams', 'ratingsService', Controllers.RatingsListController])
         .controller('itemRatingController', $scope => {
@@ -47,13 +47,5 @@
                 $scope.overStar = value;
                 $scope.percent = 100 * (value / $scope.max);
             };
-
-            $scope.ratingStates = [
-                { stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle' },
-                { stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty' },
-                { stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle' },
-                { stateOn: 'glyphicon-heart' },
-                { stateOff: 'glyphicon-off' }
-            ];
         });
 }

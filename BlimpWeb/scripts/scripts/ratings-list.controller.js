@@ -14,8 +14,12 @@ var ItemsApp;
                     _this.ratings = result;
                 });
             };
+            RatingsListController.prototype.save = function () {
+                this.ratingsService.submit(this.review);
+            };
             return RatingsListController;
         }());
         Controllers.RatingsListController = RatingsListController;
     })(Controllers = ItemsApp.Controllers || (ItemsApp.Controllers = {}));
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=ratings-list.controller.js.map

@@ -5,7 +5,9 @@
         public repository = this.$resource("/api/ItemsApi/:id", { id: "@id" });
         public item: any;
 
-        constructor(private $resource: angular.resource.IResourceService, private $routeParams: any, private $location: angular.ILocationService, private itemsService: Services.ItemsService) {
+        constructor(private $resource: angular.resource.IResourceService, private $routeParams: any,
+            private $location: angular.ILocationService, private itemsService: Services.ItemsService,
+            private ratingsService: Services.RatingsService) {
             this.item = this.init($routeParams.id);
         }
 
@@ -21,5 +23,6 @@
         public addItem(item: any) {
             this.itemsService.addItem(item);
         }
+        
     }
 }

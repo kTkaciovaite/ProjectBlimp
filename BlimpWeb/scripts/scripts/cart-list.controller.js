@@ -22,3 +22,4 @@ var ItemsApp;
         Controllers.CartListController = CartListController;
     })(Controllers = ItemsApp.Controllers || (ItemsApp.Controllers = {}));
 })(ItemsApp || (ItemsApp = {}));
+//# sourceMappingURL=cart-list.controller.js.map
